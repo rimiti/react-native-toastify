@@ -1,0 +1,88 @@
+{
+  "name": "react-native-toastify",
+  "description": "React Native cross-plateform (iOS/Android) Toast component highly customizable.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rimiti/react-native-toastify/blob/master/README.md",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf coverage dist tmp",
+    "lint": "eslint .",
+    "prepare": "npm run build",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "babel src/ -d dist/",
+    "build:watch": "babel --watch src/ -d dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rimiti/react-native-toastify.git"
+  },
+  "keywords": [
+    "toast",
+    "toastify",
+    "popup",
+    "notification",
+    "react-native toast",
+    "react-native notification",
+    "react-native modal",
+    "react-native cross toast",
+    "react-native",
+    "react-native-toastify",
+    "react-component",
+    "ios",
+    "android"
+  ],
+  "author": {
+    "name": "Dimitri DO BAIRRO",
+    "email": "dimitri.dobairro@dimsolution.com",
+    "url": "dimsolution.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rimiti/react-native-toastify/issues"
+  },
+  "dependencies": {
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-native": "^0.50.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-preset-react-native": "^4.0.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^21.2.1",
+    "jest-react-native": "^18.0.0",
+    "react-test-renderer": "^16.2.0"
+  },
+  "jest": {
+    "preset": "jest-react-native",
+    "setupFiles": [
+      "./config/enzyme.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 80,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  }
+}
