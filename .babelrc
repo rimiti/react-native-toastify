@@ -1,0 +1,11 @@
+{
+	"presets": [
+		"react-native"
+	],
+  "env": {
+    "production": {
+      "comments": false,
+      "minified": true
+    }
+  }
+}
