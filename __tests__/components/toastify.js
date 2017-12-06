@@ -5,5 +5,7 @@ import Toastify from '../../src';
 
 describe('Toastify', () => {
   it('Renders default state', () => {
+    const wrapper = shallow(<Toastify ref="toastify"/>);
+    this.wrapper.refs.toast.show('hello world!');
   });
 });
