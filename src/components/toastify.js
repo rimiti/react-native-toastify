@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Text, Animated, Dimensions} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, Animated, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../styles/toastify';
 
@@ -9,7 +9,7 @@ export const DURATION = {
   FOREVER: 0,
 };
 
-const {height} = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 export default class Toastify extends Component {
   static propTypes = {
@@ -37,18 +37,17 @@ export default class Toastify extends Component {
 
   constructor(props) {
     super(props);
-    console.log('proppppppppps:', this.props);
     this.state = {
       isShow: false,
       text: '',
       opacityValue: new Animated.Value(this.props.opacity),
-    }
+    };
   }
 
   show(text, duration) {
     this.duration = typeof duration === 'number' ? duration : DURATION.LENGTH_SHORT;
 
-    this.setState({isShow: true, text});
+    this.setState({ isShow: true, text });
     Animated.timing(this.state.opacityValue, {
       toValue: this.props.opacity,
       duration: this.props.fadeInDuration,
@@ -71,7 +70,7 @@ export default class Toastify extends Component {
         duration: this.props.fadeOutDuration,
       })
         .start(() => {
-          this.setState({isShow: false});
+          this.setState({ isShow: false });
           this.isShow = false;
         });
     }, delay);
@@ -83,14 +82,14 @@ export default class Toastify extends Component {
 
   getPosition() {
     if (this.props.position === 'top') return this.props.positionValue;
-    else if(this.props.position === 'center') return height / 2;
-    else if(this.props.position === 'bottom') return height - this.props.positionValue;
+    else if (this.props.position === 'center') return height / 2;
+    else if (this.props.position === 'bottom') return height - this.props.positionValue;
   }
 
   render() {
     return this.state.isShow ?
-      <View style={[styles.container, {top: this.getPosition()}]} pointerEvents="none">
-        <Animated.View style={[styles.content, {opacity: this.state.opacityValue}, this.props.style]}>
+      <View style={[styles.container, { top: this.getPosition() }]} pointerEvents="none">
+        <Animated.View style={[styles.content, { opacity: this.state.opacityValue }, this.props.style]}>
           <Text style={this.props.textStyle}>{this.state.text}</Text>
         </Animated.View>
       </View> : null;
