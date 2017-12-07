@@ -80,15 +80,15 @@ export default class Toastify extends Component {
     this.timer && clearTimeout(this.timer);
   }
 
-  getPosition() {
+  position() {
     if (this.props.position === 'top') return this.props.positionValue;
     else if (this.props.position === 'center') return height / 2;
-    else if (this.props.position === 'bottom') return height - this.props.positionValue;
+    return height - this.props.positionValue;
   }
 
   render() {
     return this.state.isShow ?
-      <View style={[styles.container, { top: this.getPosition() }]} pointerEvents="none">
+      <View style={[styles.container, { top: this.position() }]} pointerEvents="none">
         <Animated.View style={[styles.content, { opacity: this.state.opacityValue }, this.props.style]}>
           <Text style={this.props.textStyle}>{this.state.text}</Text>
         </Animated.View>
