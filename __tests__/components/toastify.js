@@ -12,18 +12,25 @@ function factory(props = {}) {
 }
 
 describe('Toastify', () => {
-  it('Renders default state', () => {
+  it('Render with default state', () => {
     const { wrapper } = factory();
     expect(wrapper.type()).toBe(null);
   });
 
-  it('Test in progress', () => {
+  it('Render with open state', () => {
     const { wrapper } = factory();
-    wrapper.instance().show('test', 10000);
-    wrapper.instance().show('test', '10000');
-    wrapper.instance().close(10000);
-    wrapper.instance().close('10000');
-    wrapper.instance().getPosition();
-    expect(wrapper.type()).toBe(null);
+    wrapper.instance().open(10000);
   });
+
+  // it('Render with close state', () => {
+  //   const { wrapper } = factory();
+  //   wrapper.instance().show('test', 10000);
+  //   expect(wrapper.type()).toBe(null);
+  // });
+  //
+  // it('Test position method', () => {
+  //   const { wrapper } = factory();
+  //   wrapper.instance().position();
+  //   expect(wrapper.type()).toBe(null);
+  // });
 });
