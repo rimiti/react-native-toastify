@@ -4,10 +4,9 @@ import { shallow } from 'enzyme';
 import Toastify from '../../src';
 
 function factory(props = {}) {
-  const wrapper = shallow(<Toastify ref="toastify" {...props} />, { context: {} });
   return {
     props,
-    wrapper,
+    wrapper: shallow(<Toastify ref="toastify" {...props} />, { context: {} }),
   };
 }
 
@@ -19,7 +18,7 @@ describe('Toastify', () => {
 
   it('Render with open state', () => {
     const { wrapper } = factory();
-    wrapper.instance().open(10000);
+    wrapper.instance().show(10000);
   });
 
   // it('Render with close state', () => {
