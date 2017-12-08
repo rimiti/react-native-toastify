@@ -18,6 +18,6 @@ before_install:
   - if [[ ${FRESH_DEPS} == "true" ]]; then rm package-lock.json; fi
 install:
   - if [[ ${FRESH_DEPS} == "true" ]]; then npm install --prefer-online; else npm install --prefer-offline; fi
-  - npm install enzyme enzyme-adapter-react-16 react react-dom react-native --save
+  - npm install enzyme enzyme-adapter-react-16 react react-dom react-native prop-types --save
   - npm install eslint eslint-config-airbnb babel-eslint eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev
 after_success: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
