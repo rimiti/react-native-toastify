@@ -15,7 +15,6 @@ describe('Toastify', () => {
     const { wrapper } = factory();
     const expected = {
       defaultCloseDelay: 250,
-      durationLong: 2000,
       durationShort: 500,
       end: 0,
       fadeInDuration: 500,
@@ -24,7 +23,7 @@ describe('Toastify', () => {
       position: 'bottom',
       positionValue: 120,
       style: {},
-      textStyle: { color: '#fff' },
+      textStyle: {color: '#fff'}
     };
     expect(wrapper.type()).toBe(null);
     expect(wrapper.instance().props).toEqual(expected);
