@@ -2,22 +2,10 @@ language: node_js
 node_js:
   - 8
   - 6
-env:
-  - FRESH_DEPS=false
-  - FRESH_DEPS=true
-matrix:
-  exclude:
-    - node_js: 6
-      env: FRESH_DEPS=true
-cache:
-  directories:
-    - $HOME/.npm
 before_install:
   - npm install --global npm@^5.3.0
   - npm --version
-  - if [[ ${FRESH_DEPS} == "true" ]]; then rm package-lock.json; fi
 install:
-  - if [[ ${FRESH_DEPS} == "true" ]]; then npm install --prefer-online; else npm install --prefer-offline; fi
   - npm install enzyme enzyme-adapter-react-16 react react-dom react-native prop-types --save
   - npm install babel-cli babel-eslint babel-preset-react-native coveralls eslint eslint-config-airbnb --save-dev
   - npm install eslint-plugin-react eslint-plugin-jsx-a11y react-test-renderer eslint-plugin-import --save-dev
