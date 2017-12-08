@@ -20,7 +20,7 @@ React Native cross-plateform (iOS/Android) toast notification component highly c
 ## Install
 
 ```
-$ yarn add react-native-toastify
+$ npm install react-native-toastify --save
 ```
 
 ## Demo
@@ -31,7 +31,25 @@ $ yarn add react-native-toastify
 ## Examples
 
 ```
+import React, {Component} from 'react';
+import {Button, View} from 'react-native';
+import Toast from 'react-native-toastify';
 
+export default class Layout extends Component {
+
+	constructor(props) {
+		super(props)
+	}
+
+	render() {
+		return (
+			<View style={{paddingTop: 300}}>
+				<Button	onPress={() => this.toastify.show('Hello World !', 1000)}	title="Demo" />
+				<Toast ref={(c) => this.toastify = c} />
+			</View>
+		)
+	}
+}
 ```
 
 ## Documentation
@@ -39,6 +57,16 @@ $ yarn add react-native-toastify
 ```
 Props                     Type                  Description                                                 Usage
 ----------------------------------------------------------------------------------------------------------------------
+style                     {View}                Style definitions for the global element                    (optional)
+position                  {top, center, bottom} Position of toast.                                          (optional)
+textStyle                 {Text}                Style definitions for the toast text element                (optional)
+positionValue             {number}              Position value of toast                                     (optional)
+fadeInDuration            {number}              Duration of fade in                                         (optional)
+fadeOutDuration           {number}              Duration of fade out                                        (optional)
+opacity                   {number}              Opacity value                                               (optional)
+durationShort             {number}              Show duration                                               (optional)
+defaultCloseDelay         {number}              Close delay duration                                        (optional)
+end                       {number}              End value of animation                                      (optional)
 
 ```
 
