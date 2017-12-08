@@ -62,9 +62,9 @@ MIT © [Dimitri DO BAIRRO](https://github.com/rimiti/react-native-toastify/blob/
 [prod-dependencies]: https://david-dm.org/rimiti/react-native-toastify
 [dev-dependencies-badge]: https://david-dm.org/rimiti/react-native-toastify/dev-status.svg
 [dev-dependencies]: https://david-dm.org/rimiti/react-native-toastify?type=dev
-[security-version-badge]: https://nodesecurity.io/orgs/dim-solution/projects/e65e3a46-4110-4de2-ae92-1584b59d3ff0/badge
-[security-version]: https://nodesecurity.io/orgs/dim-solution/projects/e65e3a46-4110-4de2-ae92-1584b59d3ff0
-[codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/7951ca62e66be94eba69/maintainability
+[security-version-badge]: https://nodesecurity.io/orgs/dim-solution/projects/e0282cd3-680f-406a-9fa3-22e94c596073/badge
+[security-version]: https://nodesecurity.io/orgs/dim-solution/projects/e0282cd3-680f-406a-9fa3-22e94c596073
+[codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/e90f04fc308e5efeabac/maintainability
 [codeclimate-score]: https://codeclimate.com/github/rimiti/react-native-toastify/maintainability
 [coveralls-coverage-badge]: https://coveralls.io/repos/github/rimiti/react-native-toastify/badge.svg
 [coveralls-coverage]: https://coveralls.io/github/rimiti/react-native-toastify
