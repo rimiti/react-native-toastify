@@ -18,21 +18,19 @@ export default class Toastify extends Component {
     fadeInDuration: PropTypes.number,
     fadeOutDuration: PropTypes.number,
     opacity: PropTypes.number,
-    durationLong: PropTypes.number,
     durationShort: PropTypes.number,
     defaultCloseDelay: PropTypes.number,
     end: PropTypes.number,
   };
 
   static defaultProps = {
-    // style: {},
+    style: {},
     position: 'bottom',
     textStyle: styles.text,
     positionValue: 120,
     fadeInDuration: 500,
     fadeOutDuration: 500,
     opacity: 1,
-    durationLong: 2000,
     durationShort: 500,
     defaultCloseDelay: 250,
     end: 0,
@@ -45,6 +43,10 @@ export default class Toastify extends Component {
       text: '',
       opacityValue: new Animated.Value(this.props.opacity),
     };
+  }
+
+  componentWillUnmount() {
+    this.resetTimeout();
   }
 
   show(text, duration) {
@@ -66,10 +68,10 @@ export default class Toastify extends Component {
 
   close(duration) {
     let delay = typeof duration === 'number' ? duration : this.state.duration;
-    if (delay === this.props.end) delay = this.props.defaultCloseDelay || 250;
+    if (delay === this.props.end) delay = this.props.defaultCloseDelay;
 
     if (!this.isShow && !this.state.isShow) return;
-    this.timer && clearTimeout(this.timer);
+    this.resetTimeout();
     this.timer = setTimeout(() => Animated.timing(this.state.opacityValue, {
       toValue: 0.0,
       duration: this.props.fadeOutDuration,
@@ -80,8 +82,8 @@ export default class Toastify extends Component {
       }), delay);
   }
 
-  componentWillUnmount() {
-    this.timer && clearTimeout(this.timer);
+  resetTimeout() {
+    clearTimeout(this.timer);
   }
 
   position() {
@@ -93,7 +95,9 @@ export default class Toastify extends Component {
   render() {
     return this.state.isShow ?
       <View style={[styles.container, { top: this.position() }]} pointerEvents="none">
-        <Animated.View style={[styles.content, { opacity: this.state.opacityValue }, this.props.style]}>
+        <Animated.View
+          style={[styles.content, { opacity: this.state.opacityValue }, this.props.style]}
+        >
           <Text style={this.props.textStyle}>{this.state.text}</Text>
         </Animated.View>
       </View> : null;
