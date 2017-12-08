@@ -1,7 +1,7 @@
 {
   "name": "react-native-toastify",
   "description": "React Native cross-plateform (iOS/Android) toast notification component highly customizable.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/rimiti/react-native-toastify/blob/master/README.md",
   "main": "dist/index.js",
   "license": "MIT",
@@ -41,14 +41,6 @@
   },
   "bugs": {
     "url": "https://github.com/rimiti/react-native-toastify/issues"
-  },
-  "dependencies": {
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-native": "^0.50.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
