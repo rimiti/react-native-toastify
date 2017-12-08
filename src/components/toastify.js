@@ -3,12 +3,6 @@ import { View, Text, Animated, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../styles/toastify';
 
-export const DURATION = {
-  LENGTH_LONG: 2000,
-  LENGTH_SHORT: 500,
-  FOREVER: 0,
-};
-
 const { height } = Dimensions.get('window');
 
 export default class Toastify extends Component {
@@ -24,15 +18,24 @@ export default class Toastify extends Component {
     fadeInDuration: PropTypes.number,
     fadeOutDuration: PropTypes.number,
     opacity: PropTypes.number,
+    durationLong: PropTypes.number,
+    durationShort: PropTypes.number,
+    defaultCloseDelay: PropTypes.number,
+    end: PropTypes.number,
   };
 
   static defaultProps = {
+    // style: {},
     position: 'bottom',
     textStyle: styles.text,
     positionValue: 120,
     fadeInDuration: 500,
     fadeOutDuration: 500,
     opacity: 1,
+    durationLong: 2000,
+    durationShort: 500,
+    defaultCloseDelay: 250,
+    end: 0,
   };
 
   constructor(props) {
@@ -45,35 +48,36 @@ export default class Toastify extends Component {
   }
 
   show(text, duration) {
-    this.duration = typeof duration === 'number' ? duration : DURATION.LENGTH_SHORT;
+    this.setState({
+      isShow: true,
+      text,
+      duration: typeof duration === 'number' ? duration : this.props.durationShort,
+    });
 
-    this.setState({ isShow: true, text });
     Animated.timing(this.state.opacityValue, {
       toValue: this.props.opacity,
       duration: this.props.fadeInDuration,
     })
       .start(() => {
         this.isShow = true;
-        if (duration !== DURATION.FOREVER) this.close();
+        if (duration !== this.props.end) this.close();
       });
   }
 
   close(duration) {
-    let delay = typeof duration === 'undefined' ? this.duration : duration;
-    if (delay === DURATION.FOREVER) delay = this.props.defaultCloseDelay || 250;
+    let delay = typeof duration === 'number' ? duration : this.state.duration;
+    if (delay === this.props.end) delay = this.props.defaultCloseDelay || 250;
 
     if (!this.isShow && !this.state.isShow) return;
     this.timer && clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
-      Animated.timing(this.state.opacityValue, {
-        toValue: 0.0,
-        duration: this.props.fadeOutDuration,
-      })
-        .start(() => {
-          this.setState({ isShow: false });
-          this.isShow = false;
-        });
-    }, delay);
+    this.timer = setTimeout(() => Animated.timing(this.state.opacityValue, {
+      toValue: 0.0,
+      duration: this.props.fadeOutDuration,
+    })
+      .start(() => {
+        this.setState({ isShow: false });
+        this.isShow = false;
+      }), delay);
   }
 
   componentWillUnmount() {
