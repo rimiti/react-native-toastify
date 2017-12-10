@@ -3,11 +3,11 @@ node_js:
   - 8
   - 6
 before_install:
-  - npm install --global npm@^5.3.0
+  - npm install --global npm@^5.3.0 codecov
   - npm --version
 install:
   - npm install enzyme enzyme-adapter-react-16 react react-dom react-native prop-types --save
-  - npm install babel-cli babel-eslint babel-preset-react-native coveralls eslint eslint-config-airbnb --save-dev
+  - npm install babel-cli babel-eslint babel-preset-react-native eslint eslint-config-airbnb --save-dev
   - npm install eslint-plugin-react eslint-plugin-jsx-a11y react-test-renderer eslint-plugin-import --save-dev
   - npm install jest jest-react-native --save-dev
-after_success: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+after_success: codecov
