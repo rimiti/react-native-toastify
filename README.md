@@ -3,7 +3,7 @@
 [![Dependencies][prod-dependencies-badge]][prod-dependencies]
 [![Dependencies][dev-dependencies-badge]][dev-dependencies]
 [![Code Climate score][codeclimate-score-badge]][codeclimate-score]
-[![Coveralls][coveralls-coverage-badge]][coveralls-coverage]
+[![Codecov][codecov-coverage-badge]][codecov-coverage]
 [![Code Climate coverage][codeclimate-issues-badge]][codeclimate-issues]
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
@@ -11,7 +11,6 @@
 [![Security version][security-version-badge]][security-version]
 [![MIT License][license-badge]][LICENSE]
 [![PRs Welcome][prs-badge]][prs]
-
 
 ## Description
 
@@ -94,8 +93,8 @@ MIT © [Dimitri DO BAIRRO](https://github.com/rimiti/react-native-toastify/blob/
 [security-version]: https://nodesecurity.io/orgs/dim-solution/projects/e0282cd3-680f-406a-9fa3-22e94c596073
 [codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/e90f04fc308e5efeabac/maintainability
 [codeclimate-score]: https://codeclimate.com/github/rimiti/react-native-toastify/maintainability
-[coveralls-coverage-badge]: https://coveralls.io/repos/github/rimiti/react-native-toastify/badge.svg
-[coveralls-coverage]: https://coveralls.io/github/rimiti/react-native-toastify
+[codecov-coverage-badge]: https://codecov.io/gh/rimiti/react-native-toastify/branch/master/graph/badge.svg
+[codecov-coverage]: https://codecov.io/gh/rimiti/react-native-toastify
 [codeclimate-issues-badge]: https://codeclimate.com/github/rimiti/react-native-toastify/badges/issue_count.svg
 [codeclimate-issues]: https://codeclimate.com/github/rimiti/react-native-toastify
 [nodejs-badge]: https://img.shields.io/badge/node->=%206.9.0-blue.svg?style=flat-square
