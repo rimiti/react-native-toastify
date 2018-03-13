@@ -1,5 +1,5 @@
 {
-  "name": "react-native-toastify",
+  "name": "@rimiti/react-native-toastify",
   "description": "React Native cross-plateform (iOS/Android) toast notification component highly customizable.",
   "version": "0.2.2",
   "homepage": "https://github.com/rimiti/react-native-toastify/blob/master/README.md",
