@@ -19,7 +19,7 @@ React Native cross-plateform (iOS/Android) toast notification component highly c
 ## Install
 
 ```
-$ npm install react-native-toastify --save
+$ npm install @rimiti/react-native-toastify --save
 ```
 
 ## Demo
@@ -32,7 +32,7 @@ $ npm install react-native-toastify --save
 ```
 import React, {Component} from 'react';
 import {Button, View} from 'react-native';
-import Toast from 'react-native-toastify';
+import Toast from '@rimiti/react-native-toastify';
 
 export default class Layout extends Component {
 
