@@ -1,7 +1,7 @@
 {
   "name": "@rimiti/react-native-toastify",
   "description": "React Native cross-plateform (iOS/Android) toast notification component highly customizable.",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/rimiti/react-native-toastify/blob/master/README.md",
   "main": "dist/index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "prepare": "npm run build",
     "test": "npm run test-only",
-    "test-only": "jest --coverage",
+    "test-only": "jest --coverage --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
     "build": "babel src/ -d dist/",
     "build:watch": "babel --watch src/ -d dist/"
@@ -43,7 +43,7 @@
     "url": "https://github.com/rimiti/react-native-toastify/issues"
   },
   "jest": {
-    "preset": "jest-react-native",
+    "preset": "react-native",
     "setupFiles": [
       "./config/enzyme.js"
     ],
