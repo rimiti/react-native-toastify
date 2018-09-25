@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Animated, Dimensions } from 'react-native';
+import { View, Text, Animated, Dimensions, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../styles/toastify';
 
@@ -7,7 +7,7 @@ const { height } = Dimensions.get('window');
 
 export default class Toastify extends Component {
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     position: PropTypes.oneOf([
       'top',
       'center',
