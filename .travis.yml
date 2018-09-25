@@ -2,7 +2,10 @@ language: node_js
 node_js:
   - 10
   - 8
+before_install:
+  - npm install codecov -g
 install:
   - npm i enzyme enzyme-adapter-react-16 prop-types react react-dom react-native -S
   - npm i babel-cli babel-eslint babel-jest babel-preset-env babel-preset-react-native eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react jest jest-react-native react-test-renderer schedule -D
+
 after_success: codecov
