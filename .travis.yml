@@ -1,13 +1,11 @@
 language: node_js
 node_js:
+  - 10
   - 8
-  - 6
 before_install:
-  - npm install --global npm@^5.3.0 codecov
-  - npm --version
+  - npm install codecov -g
 install:
-  - npm install enzyme enzyme-adapter-react-16 react react-dom react-native prop-types --save
-  - npm install babel-cli babel-eslint babel-preset-react-native eslint eslint-config-airbnb --save-dev
-  - npm install eslint-plugin-react eslint-plugin-jsx-a11y react-test-renderer eslint-plugin-import --save-dev
-  - npm install jest jest-react-native --save-dev
+  - npm i enzyme enzyme-adapter-react-16 prop-types react react-dom react-native -S
+  - npm i babel-cli babel-eslint babel-jest babel-preset-env babel-preset-react-native eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react jest jest-react-native react-test-renderer schedule@0.4.0 -D
+
 after_success: codecov
