@@ -1,6 +1,7 @@
 // Type definitions for @rimiti/react-native-toastify v1.0.0
 // Project: @rimiti/react-native-toastify
 // Definitions by: Jules Samuel Randolph <https://github.com/jsamr>
+//                 Dimitri DO BAIRRO <https://github.com/rimiti>
 
 import { Component } from 'react'
 import { ViewProps, StyleProp, TextProps } from 'react-native'
