@@ -5,4 +5,5 @@
 .travis.yml
 __tests__
 config
+coverage
 demo
