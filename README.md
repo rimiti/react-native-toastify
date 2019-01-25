@@ -1,11 +1,11 @@
 # react-native-toastify
 
-[![Code Climate score][codeclimate-score-badge]][codeclimate-score]
+[![Build Status][travis-badge]][travis-ci]
 [![Codecov][codecov-coverage-badge]][codecov-coverage]
+[![Code Climate score][codeclimate-score-badge]][codeclimate-score]
 [![Code Climate coverage][codeclimate-issues-badge]][codeclimate-issues]
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
-[![Build Status][travis-badge]][travis-ci]
 [![MIT License][license-badge]][LICENSE]
 [![PRs Welcome][prs-badge]][prs]
 
