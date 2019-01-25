@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "homepage": "https://github.com/rimiti/react-native-toastify/blob/master/README.md",
   "main": "dist/index.js",
+  "types": "index.d.ts",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf coverage dist tmp",
+    "prepublishOnly": "npm run build",
     "lint": "eslint .",
-    "prepare": "npm run build",
     "test": "npm run test-only",
     "test-only": "jest --coverage --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
@@ -42,11 +43,15 @@
   "bugs": {
     "url": "https://github.com/rimiti/react-native-toastify/issues"
   },
+  "dependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*"
+  },
   "jest": {
-    "preset": "react-native",
     "setupFiles": [
       "./config/enzyme.js"
     ],
+    "preset": "react-native",
     "coverageThreshold": {
       "global": {
         "branches": 90,
