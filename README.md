@@ -1,14 +1,11 @@
 # react-native-toastify
 
-[![Dependencies][prod-dependencies-badge]][prod-dependencies]
-[![Dependencies][dev-dependencies-badge]][dev-dependencies]
 [![Code Climate score][codeclimate-score-badge]][codeclimate-score]
 [![Codecov][codecov-coverage-badge]][codecov-coverage]
 [![Code Climate coverage][codeclimate-issues-badge]][codeclimate-issues]
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
 [![Build Status][travis-badge]][travis-ci]
-[![Security version][security-version-badge]][security-version]
 [![MIT License][license-badge]][LICENSE]
 [![PRs Welcome][prs-badge]][prs]
 
@@ -19,7 +16,7 @@ React Native cross-plateform (iOS/Android) toast notification component highly c
 ## Install
 
 ```
-$ npm install @rimiti/react-native-toastify --save
+$ yarn add @rimiti/react-native-toastify
 ```
 
 ## Demo
@@ -85,12 +82,6 @@ Run using npm run <script> command.
 ## License
 MIT © [Dimitri DO BAIRRO](https://github.com/rimiti/react-native-toastify/blob/master/LICENSE)
 
-[prod-dependencies-badge]: https://david-dm.org/rimiti/react-native-toastify/status.svg
-[prod-dependencies]: https://david-dm.org/rimiti/react-native-toastify
-[dev-dependencies-badge]: https://david-dm.org/rimiti/react-native-toastify/dev-status.svg
-[dev-dependencies]: https://david-dm.org/rimiti/react-native-toastify?type=dev
-[security-version-badge]: https://nodesecurity.io/orgs/dim-solution/projects/e0282cd3-680f-406a-9fa3-22e94c596073/badge
-[security-version]: https://nodesecurity.io/orgs/dim-solution/projects/e0282cd3-680f-406a-9fa3-22e94c596073
 [codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/e90f04fc308e5efeabac/maintainability
 [codeclimate-score]: https://codeclimate.com/github/rimiti/react-native-toastify/maintainability
 [codecov-coverage-badge]: https://codecov.io/gh/rimiti/react-native-toastify/branch/master/graph/badge.svg
