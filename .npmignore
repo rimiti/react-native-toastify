@@ -1,0 +1,8 @@
+.idea
+.vscode
+.codeclimate.yml
+.editorconfig
+.travis.yml
+__tests__
+config
+demo
