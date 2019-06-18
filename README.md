@@ -6,12 +6,12 @@
 [![Code Climate coverage][codeclimate-issues-badge]][codeclimate-issues]
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
-[![MIT License][license-badge]][LICENSE]
+[![MIT License][license-badge]][license]
 [![PRs Welcome][prs-badge]][prs]
 
 ## Description
 
-React Native cross-plateform (iOS/Android) toast notification component highly customizable.
+React Native cross-platform (iOS/Android) toast notification component highly customizable.
 
 ## Install
 
@@ -78,8 +78,8 @@ Run using npm run <script> command.
     build - compile source files,
     build:watch - interactive watch mode, compile sources on change.
 
-
 ## License
+
 MIT © [Dimitri DO BAIRRO](https://github.com/rimiti/react-native-toastify/blob/master/LICENSE)
 
 [codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/e90f04fc308e5efeabac/maintainability
