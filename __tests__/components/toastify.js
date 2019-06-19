@@ -23,7 +23,7 @@ describe('Toastify', () => {
       position: 'bottom',
       positionValue: 120,
       style: {},
-      textStyle: {color: '#fff'}
+      textStyle: { color: '#fff' },
     };
     expect(wrapper.type()).toBe(null);
     expect(wrapper.instance().props).toEqual(expected);
