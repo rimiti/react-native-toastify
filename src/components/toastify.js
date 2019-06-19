@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Animated, Dimensions, ViewPropTypes } from 'react-native';
+import {
+  View, Text, Animated, Dimensions, ViewPropTypes,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../styles/toastify';
 
@@ -88,18 +90,20 @@ export default class Toastify extends Component {
 
   position() {
     if (this.props.position === 'top') return this.props.positionValue;
-    else if (this.props.position === 'center') return height / 2;
+    if (this.props.position === 'center') return height / 2;
     return height - this.props.positionValue;
   }
 
   render() {
-    return this.state.isShow ?
-      <View style={[styles.container, { top: this.position() }]} pointerEvents="none">
-        <Animated.View
-          style={[styles.content, { opacity: this.state.opacityValue }, this.props.style]}
-        >
-          <Text style={this.props.textStyle}>{this.state.text}</Text>
-        </Animated.View>
-      </View> : null;
+    return this.state.isShow
+      ? (
+        <View style={[styles.container, { top: this.position() }]} pointerEvents="none">
+          <Animated.View
+            style={[styles.content, { opacity: this.state.opacityValue }, this.props.style]}
+          >
+            <Text style={this.props.textStyle}>{this.state.text}</Text>
+          </Animated.View>
+        </View>
+      ) : null;
   }
 }
