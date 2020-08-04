@@ -2,6 +2,7 @@
   "name": "@rimiti/react-native-toastify",
   "description": "React Native cross-plateform (iOS/Android) toast notification component highly customizable.",
   "version": "1.3.0",
+  "author": "Dimitri DO BAIRRO <dimitri.dobairro@dimsolution.com>",
   "homepage": "https://github.com/rimiti/react-native-toastify/blob/master/README.md",
   "main": "dist/index.js",
   "types": "index.d.ts",
@@ -36,14 +37,13 @@
     "ios",
     "android"
   ],
-  "author": "Dimitri DO BAIRRO <dimitri.dobairro@dimsolution.com>",
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "15.x"
   },
   "peerDependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "0.63.2"
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-native": ">= 0.56 < 1"
   },
   "devDependencies": {
     "@babel/cli": "7.10.5",
