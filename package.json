@@ -10,6 +10,7 @@
     "clean": "rm -rf coverage dist tmp",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
+    "pretest": "yarn add react@16.13.1 react-dom@16.13.1 react-native@0.63.2",
     "test": "npm run test-only",
     "test-only": "jest --coverage --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
@@ -35,16 +36,11 @@
     "ios",
     "android"
   ],
-  "author": {
-    "name": "Dimitri DO BAIRRO",
-    "email": "dimitri.dobairro@dimsolution.com",
-    "url": "dimsolution.com"
-  },
-  "bugs": {
-    "url": "https://github.com/rimiti/react-native-toastify/issues"
-  },
+  "author": "Dimitri DO BAIRRO <dimitri.dobairro@dimsolution.com>",
   "dependencies": {
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.2"
